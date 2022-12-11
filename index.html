@@ -91,7 +91,17 @@
     <script>
     
     <script>
-
+function filterColumn(i) {
+    $('#example')
+        .DataTable()
+        .column(i)
+        .search(
+            $('#col' + i + '_filter').val(),
+            $('#col' + i + '_regex').prop('checked'),
+            $('#col' + i + '_smart').prop('checked')
+        )
+        .draw();
+}
 $(document).ready(function (){
 	var dataSrc = [];
 	var table = $('#example').DataTable({
