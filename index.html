@@ -156,6 +156,10 @@ $(document).ready(function (){
             }
           },
     	],
+		columnDefs: [
+    { targets: [1, 3], searchable: true },    
+    { targets: '_all', searchable: false }
+  ],
 		'initComplete': function(){
          var api = this.api();
 
