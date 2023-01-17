@@ -174,14 +174,12 @@ $(document).ready(function (){
          $('.dataTables_filter input[type="search"]', api.table().container())
             .typeahead({
                source: dataSrc,
-               afterSelect: function(){
-		  var searchTerm = this.value.toLowerCase(),
-       		  regex = '\\b' + searchTerm + '\\b';
-                  table.rows().search(regex, true, false).draw();
+               afterSelect: function(value){
+                  api.search(value).draw();
                }
             }
          );
-      }
+      
 		
     	});
 	
