@@ -174,10 +174,10 @@ $(document).ready(function (){
          $('.dataTables_filter input[type="search"]', api.table().container())
             .typeahead({
                source: dataSrc,
-               afterSelect: function(value){
+               afterSelect: function(){
 		  var searchTerm = this.value.toLowerCase(),
        		  regex = '\\b' + searchTerm + '\\b';
-                  api.search(regex, true, false).draw();
+                  table.rows().search(regex, true, false).draw();
                }
             }
          );
