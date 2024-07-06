@@ -104,7 +104,16 @@ function filterColumn(i) {
 }
 $(document).ready(function (){
 	var dataSrc = [];
-	var table = $('#example').DataTable({
+	var table = $('#example').DataTable({layout: {
+        topStart: {
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    download: 'open'
+                }
+            ]
+        }
+    },
 		ajax: 'Data.txt',
 	responsive: true,
 	"language": {"url": "//raw.githubusercontent.com/buidathieu/vacxin.github.io/master/vi.json" },
