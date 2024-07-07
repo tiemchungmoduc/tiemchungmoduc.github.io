@@ -111,9 +111,7 @@ function filterColumn(i) {
 $(document).ready(function (){
 	var dataSrc = [];
 	var table = new $('#example').DataTable(
-            "buttons": [
-                'print'
-		]
+            "buttons": {'print'}
           ,
 		ajax: 'Data.txt',
 	responsive: true,
