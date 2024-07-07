@@ -111,7 +111,17 @@ function filterColumn(i) {
 $(document).ready(function (){
 	var dataSrc = [];
 	var table = $('#example').DataTable(
-            "buttons": 'print'
+            "buttons": [
+              'print',
+              'copyHtml5',
+              'csvHtml5',
+              {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                fontSize: 15
+              }
+               
+          ]
           ,
 		ajax: 'Data.txt',
 	responsive: true,
