@@ -110,8 +110,8 @@ function filterColumn(i) {
 }
 $(document).ready(function (){
 	var dataSrc = [];
-	var table = new $('#example').DataTable(
-            "buttons": {'print'}
+	var table = $('#example').DataTable(
+            "buttons": 'print'
           ,
 		ajax: 'Data.txt',
 	responsive: true,
